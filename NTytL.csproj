@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <UserSecretsId>aspnet-NTytL-26F41218-E67F-46C6-AB96-E2A91AB04494</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+    <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="node_modules\wait-for-it.sh\package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="node_modules\.bin\wait-for-it" />
+    <None Include="node_modules\.bin\wait-for-it.cmd" />
+    <None Include="node_modules\wait-for-it.sh\bin\wait-for-it" />
+    <None Include="node_modules\wait-for-it.sh\index.js" />
+    <None Include="node_modules\wait-for-it.sh\license" />
+    <None Include="node_modules\wait-for-it.sh\readme.md" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>
